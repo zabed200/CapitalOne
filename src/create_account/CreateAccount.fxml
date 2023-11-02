@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane stylesheets="@../design/design.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="create_account.CreateAccountController">
+   <content>
+      <AnchorPane prefHeight="600.0" prefWidth="450.0">
+         <children>
+            <FontAwesomeIconView glyphName="ARROW_LEFT" layoutX="44.0" layoutY="52.0" onMouseClicked="#backToLogin" size="20" text="" />
+            <FontAwesomeIconView glyphName="CLOSE" layoutX="380.0" layoutY="52.0" onMouseClicked="#closeApp" size="20" text="" />
+            <Label layoutX="61.0" layoutY="87.0" text="Account Registration">
+               <font>
+                  <Font name="Candara Light" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="139.0" text="Fill the form carefully to create account" />
+            <Label layoutX="78.0" layoutY="224.0" text="Personal Information" textFill="#7c7c7c">
+               <font>
+                  <Font name="Candara Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="45.0" layoutY="317.0" prefHeight="38.0" prefWidth="340.0" promptText="Full Name" styleClass="field-decoration" stylesheets="@../design/design.css" />
+            <TextField fx:id="idcardno" layoutX="45.0" layoutY="367.0" prefHeight="38.0" prefWidth="340.0" promptText="ID Card No." styleClass="field-decoration" />
+            <TextField fx:id="mobileno" layoutX="45.0" layoutY="417.0" prefHeight="38.0" prefWidth="340.0" promptText="Mobile No." styleClass="field-decoration" />
+            <ComboBox fx:id="gender" layoutX="45.0" layoutY="467.0" prefHeight="38.0" prefWidth="340.0" promptText="Gender" styleClass="field-decoration" />
+            <ComboBox fx:id="maritalstatus" layoutX="45.0" layoutY="518.0" prefHeight="38.0" prefWidth="340.0" promptText="Marital Status" styleClass="field-decoration" />
+            <ComboBox fx:id="religion" layoutX="45.0" layoutY="569.0" prefHeight="38.0" prefWidth="340.0" promptText="Religion" styleClass="field-decoration" />
+            <DatePicker fx:id="dob" layoutX="45.0" layoutY="625.0" prefHeight="38.0" prefWidth="340.0" promptText="Date Of Birth" />
+            <TextField fx:id="city" layoutX="45.0" layoutY="676.0" prefHeight="38.0" prefWidth="340.0" promptText="City" styleClass="field-decoration" />
+            <TextField fx:id="address" layoutX="45.0" layoutY="730.0" prefHeight="38.0" prefWidth="340.0" promptText="Address" styleClass="field-decoration" />
+            <Label layoutX="81.0" layoutY="831.0" text="Account Information" textFill="#7c7c7c">
+               <font>
+                  <Font name="Candara Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="accountno" layoutX="45.0" layoutY="888.0" prefHeight="38.0" prefWidth="340.0" promptText="Your 6 Digit Account No." styleClass="field-decoration" />
+            <TextField fx:id="balance" layoutX="45.0" layoutY="940.0" prefHeight="38.0" prefWidth="340.0" promptText="Balance" styleClass="field-decoration" />
+            <ComboBox fx:id="accounttype" layoutX="45.0" layoutY="993.0" prefHeight="38.0" prefWidth="340.0" promptText="Account Type" styleClass="field-decoration" />
+            <PasswordField fx:id="pin" layoutX="45.0" layoutY="1044.0" prefHeight="38.0" prefWidth="340.0" promptText="PIN" styleClass="field-decoration" />
+            <ComboBox fx:id="questions" layoutX="45.0" layoutY="1095.0" prefHeight="38.0" prefWidth="340.0" promptText="Security Questions" styleClass="field-decoration" />
+            <TextField fx:id="answer" layoutX="45.0" layoutY="1146.0" prefHeight="38.0" prefWidth="340.0" promptText="Answer" styleClass="field-decoration" />
+            <ImageView fx:id="profilepic" fitHeight="150.0" fitWidth="150.0" layoutX="53.0" layoutY="1213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/unnamed.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="244.0" layoutY="1251.0" text="Profile Picture">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Button layoutX="238.0" layoutY="1293.0" mnemonicParsing="false" onMouseClicked="#setUpPic" styleClass="login-button" text=" Browse Picture">
+               <graphic>
+                  <FontAwesomeIconView glyphName="UPLOAD" />
+               </graphic>
+            </Button>
+            <Button layoutX="126.0" layoutY="1415.0" mnemonicParsing="false" onMouseClicked="#newAccount" prefHeight="35.0" prefWidth="200.0" styleClass="login-button" text="Create Account">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
